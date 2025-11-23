@@ -1,0 +1,40 @@
+/* Esto cambia la fuente de toda la página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+/* Esto maquilla tu tarjeta de producto */
+.producto {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px;
+    width: 300px; /* Ancho fijo */
+    text-align: center; /* Todo centrado */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+}
+
+/* Esto asegura que la imagen no se salga de la tarjeta */
+.producto img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* Esto hace el botón atractivo */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Cambia color al pasar el mouse */
+}
