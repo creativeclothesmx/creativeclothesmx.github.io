@@ -102,7 +102,33 @@ main h1 {
     margin-bottom: 15px;
     letter-spacing: 4px; /* Espacio entre letras para hacerlo más audaz */
 }
+/* --- Estilos para la Vista de Detalles del Producto --- */
 
+.detalle-producto {
+    display: flex; /* 1. ¡Flexbox para columnas! */
+    justify-content: space-between; /* 2. Distribuye el espacio entre los dos lados */
+    max-width: 1200px; /* Limita el ancho del contenedor en pantallas grandes */
+    margin: 40px auto; /* Centra el contenedor completo y le da margen arriba/abajo */
+    gap: 50px; /* Espacio entre las dos columnas */
+    padding: 0 20px;
+}
+
+.visual-area {
+    flex: 1; /* Le dice a esta área que ocupe una parte del espacio disponible */
+    text-align: center;
+}
+
+.info-area {
+    flex: 1; /* Le dice a esta área que ocupe la otra parte del espacio */
+    text-align: left;
+}
+
+#producto-img {
+    max-width: 100%; /* La imagen no se saldrá de su columna */
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
 main p {
     font-size: 1.1rem;
     color: #777; /* Gris un poco más claro */
