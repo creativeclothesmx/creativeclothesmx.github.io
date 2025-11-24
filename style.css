@@ -1,68 +1,95 @@
-/* Esto cambia la fuente de toda la página */
+/* --- 1. Estilos Generales (Reemplazado) --- */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
+    margin: 0; /* Importante: Sin márgenes para que el menú toque los bordes */
+}
+
+/* --- 2. Estructura Principal (Nuevo) --- */
+main {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap; /* Permite que las tarjetas bajen si no caben */
+    justify-content: center; /* Centra las tarjetas */
     padding: 50px;
-    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre tarjetas */
+    text-align: center;
 }
 
-/* Esto maquilla tu tarjeta de producto */
-.producto {
-    background: white;
-    border: 1px solid #ddd;
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 20px;
-    width: 300px; /* Ancho fijo */
-    text-align: center; /* Todo centrado */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+/* Para que el título y párrafos ocupen su propia línea y no estorben a las tarjetas */
+main h1, main p {
+    width: 100%;
 }
 
-/* Esto asegura que la imagen no se salga de la tarjeta */
-.producto img {
-    max-width: 100%;
-    border-radius: 5px;
-}
-
-/* Esto hace el botón atractivo */
-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #0056b3; /* Cambia color al pasar el mouse */
-}
-/* --- Estilos del Menú de Navegación --- */
+/* --- 3. Menú de Navegación (Header) --- */
 header {
-    background-color: #333; /* Fondo gris oscuro */
+    background-color: #1a1a1a; /* Negro suave elegante */
     color: white;
-    padding: 10px 20px;
-    display: flex; /* Activa el modo flexible */
-    justify-content: space-between; /* Empuja el logo a la izq y el menú a la der */
-    align-items: center; /* Centra verticalmente */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between; /* Logo a la izq, Menú a la der */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombrita debajo del menú */
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* Letras un poco separadas estilo urbano */
 }
 
 nav ul {
-    list-style: none; /* Quita los puntos de la lista */
-    display: flex; /* Pone los links en fila horizontal */
-    gap: 20px; /* Espacio entre cada opción */
+    list-style: none;
+    display: flex;
+    gap: 25px;
     margin: 0;
     padding: 0;
 }
 
 nav a {
-    color: white; /* Texto blanco */
-    text-decoration: none; /* Quita el subrayado feo */
+    color: white;
+    text-decoration: none;
     font-weight: bold;
+    font-size: 0.9rem;
+    transition: color 0.3s; /* Suaviza el cambio de color */
 }
 
 nav a:hover {
-    color: #ff9900; /* Cambia a naranja al pasar el mouse */
+    color: #ffd700; /* Dorado urbano al pasar el mouse */
+}
+
+/* --- 4. Tarjetas de Producto --- */
+.producto {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px; /* Un poco más angosto para verse mejor */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;       /* Nuevo: ayuda a alinear el contenido interno */
+    flex-direction: column; /* Nuevo: pone imagen, texto y botón en columna */
+    align-items: center; /* Nuevo: centra todo dentro de la tarjeta */
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* --- 5. Botones --- */
+button {
+    background-color: #000; /* Botón negro estilo streetwear */
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px; /* Botón muy redondo */
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: auto; /* Empuja el botón al final de la tarjeta */
+}
+
+button:hover {
+    background-color: #333; /* Gris oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto pequeño de crecimiento */
 }
