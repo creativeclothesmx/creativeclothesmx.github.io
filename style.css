@@ -135,3 +135,26 @@ main p {
     margin-bottom: 50px; /* Mucha separación de las tarjetas */
     font-weight: 500; /* Letra un poco más gruesa */
 }
+/* --- Estilos para el Selector de Color (¡ESTO FALTABA!) --- */
+.color-picker {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.color-option {
+    display: block;
+    width: 30px; /* ¡Ahora sí tienen tamaño! */
+    height: 30px; 
+    border-radius: 50%; /* Para que sea un círculo */
+    border: 3px solid #ddd;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.color-option.selected {
+    border-color: #1a1a1a; /* Borde más grueso cuando está seleccionado */
+    transform: scale(1.1);
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+}
