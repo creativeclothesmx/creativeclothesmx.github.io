@@ -93,3 +93,19 @@ button:hover {
     background-color: #333; /* Gris oscuro al pasar el mouse */
     transform: scale(1.05); /* Efecto pequeño de crecimiento */
 }
+/* --- Estilos para el Área de Bienvenida (H1 y P) --- */
+main h1 {
+    font-size: 3rem; /* ¡Lo hacemos muy grande! */
+    color: #1a1a1a;
+    text-transform: uppercase; /* Todo en mayúsculas (muy urbano) */
+    margin-top: 20px;
+    margin-bottom: 15px;
+    letter-spacing: 4px; /* Espacio entre letras para hacerlo más audaz */
+}
+
+main p {
+    font-size: 1.1rem;
+    color: #777; /* Gris un poco más claro */
+    margin-bottom: 50px; /* Mucha separación de las tarjetas */
+    font-weight: 500; /* Letra un poco más gruesa */
+}
