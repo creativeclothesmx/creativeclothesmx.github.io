@@ -166,13 +166,15 @@ main p {
     padding: 8px 15px;
     margin-right: 10px;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 20px; /* Mucho más redondo, estilo píldora */
     transition: all 0.2s;
     font-weight: bold;
 }
 
-.size-option.selected-size {
-    background-color: #1a1a1a;
+.size-option:hover:not(.selected-size) {
+    background-color: #eee; /* Gris claro al pasar el mouse (si no está seleccionado) */
+    border-color: #333;
+}a1a;
     color: white;
     border-color: #1a1a1a;
 }
