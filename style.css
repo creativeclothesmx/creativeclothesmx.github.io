@@ -159,3 +159,20 @@ main p {
     transform: scale(1.1); /* Hacemos que crezca un poquito */
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
 }
+/* --- Estilos para los Selectores de Talla --- */
+.size-option {
+    display: inline-block;
+    border: 1px solid #aaa;
+    padding: 8px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+    font-weight: bold;
+}
+
+.size-option.selected-size {
+    background-color: #1a1a1a;
+    color: white;
+    border-color: #1a1a1a;
+}
