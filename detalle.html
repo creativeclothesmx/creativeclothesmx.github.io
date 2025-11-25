@@ -18,38 +18,38 @@
     </header>
 
     <main>
-<div class="detalle-producto">
-        <div class="visual-area">
-            <img id="producto-img" src="chainsaw-1.png" alt="Diseño Base Chainsaw Man">
+        <div class="detalle-producto">
+            
+            <div class="visual-area">
+                <img id="producto-img" src="chainsaw-1.png" alt="Diseño Base del Producto">
+            </div>
+
+            <div class="info-area">
+                <h2>Cargando Título...</h2>
+                <p class="precio">$250 MXN</p>
+
+                <div class="opciones-color">
+                    <h3>Colores Disponibles:</h3>
+                    <div class="color-picker">
+                        <span class="color-option" style="background-color: white;" data-image-src="chainsaw-1.png" onclick="changeImage(this, 'chainsaw-1.png')" data-color-name="Blanco"></span>
+                        <span class="color-option" style="background-color: black;" data-image-src="chainsaw-black.png" onclick="changeImage(this, 'chainsaw-black.png')" data-color-name="Negro"></span>
+                        <span class="color-option" style="background-color: red;" data-image-src="chainsaw-red.png" onclick="changeImage(this, 'chainsaw-red.png')" data-color-name="Rojo"></span>
+                        <span class="color-option" style="background-color: blue;" data-image-src="chainsaw-blue.png" onclick="changeImage(this, 'chainsaw-blue.png')" data-color-name="Azul"></span>
+                    </div>
+                </div>
+
+                <div class="opciones-talla">
+                    <h3>Selecciona la Talla:</h3>
+                    <span class="size-option" onclick="selectSize(this, 'S')">S</span> 
+                    <span class="size-option selected-size" onclick="selectSize(this, 'M')">M</span>
+                    <span class="size-option" onclick="selectSize(this, 'L')">L</span> 
+                    <span class="size-option" onclick="selectSize(this, 'XL')">XL</span>
+                </div>
+
+                <a href="#" id="whatsapp-final">Continuar a WhatsApp</a>
+            </div>
         </div>
-
-        <div class="info-area">
-            <h2>Playera Chainsaw Man</h2>
-            <p class="precio">$250 MXN</p>
-
-            <div class="opciones-color">
-                <h3>Colores Disponibles:</h3>
-                
-                <div class="color-picker">
-    <span class="color-option" style="background-color: white;" data-image-src="chainsaw-1.png" onclick="changeImage(this, 'chainsaw-1.png')"></span>
-    <span class="color-option" style="background-color: black;" data-image-src="chainsaw-black.png" onclick="changeImage(this, 'chainsaw-black.png')"></span>
-    <span class="color-option" style="background-color: red;" data-image-src="chainsaw-red.png" onclick="changeImage(this, 'chainsaw-red.png')"></span>
-    <span class="color-option" style="background-color: blue;" data-image-src="chainsaw-blue.png" onclick="changeImage(this, 'chainsaw-blue.png')"></span>
-</div>
-                
-            </div>
-
-            <div class="opciones-talla">
-    <h3>Selecciona la Talla:</h3>
-    <span class="size-option" onclick="selectSize(this, 'S')">S</span> 
-    <span class="size-option selected-size" onclick="selectSize(this, 'M')">M</span>
-    <span class="size-option" onclick="selectSize(this, 'L')">L</span> 
-    <span class="size-option" onclick="selectSize(this, 'XL')">XL</span>
-</div>
-
-            <button id="whatsapp-final">Continuar a WhatsApp</button>
-        </div>
-    </div>    </main>
+    </main>
 
     <script src="script.js"></script>
 </body>
