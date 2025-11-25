@@ -154,7 +154,7 @@ main p {
 }
 
 .color-option.selected {
-    border-color: #1a1a1a; /* Borde más grueso cuando está seleccionado */
+    border: 5px solid #1a1a1a; /* ¡Borde más grueso y color negro! */
     transform: scale(1.1);
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
 }
