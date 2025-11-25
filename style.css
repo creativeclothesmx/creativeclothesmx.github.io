@@ -1,41 +1,53 @@
-/* --- 1. Estilos Generales (Reemplazado) --- */
+/* --- 1. Estilos Generales --- */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f4;
-    margin: 0; /* Importante: Sin márgenes para que el menú toque los bordes */
+    margin: 0;
 }
 
-/* --- 2. Estructura Principal (Nuevo) --- */
+/* --- 2. Estructura Principal y Títulos de Catálogo --- */
 main {
     display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas bajen si no caben */
-    justify-content: center; /* Centra las tarjetas */
+    flex-wrap: wrap; 
+    justify-content: center; 
     padding: 50px;
-    gap: 20px; /* Espacio entre tarjetas */
+    gap: 20px; 
     text-align: center;
 }
 
-/* Para que el título y párrafos ocupen su propia línea y no estorben a las tarjetas */
-main h1, main p {
+main h1 {
+    font-size: 3rem; 
+    color: #1a1a1a;
+    text-transform: uppercase; 
+    margin-top: 20px;
+    margin-bottom: 15px;
+    letter-spacing: 4px; 
+    width: 100%; /* Ocupa todo el ancho */
+}
+main p {
+    font-size: 1.1rem;
+    color: #777; 
+    margin-bottom: 50px; 
+    font-weight: 500; 
     width: 100%;
 }
 
 /* --- 3. Menú de Navegación (Header) --- */
 header {
-    background-color: #1a1a1a; /* Negro suave elegante */
+    background-color: #1a1a1a; 
     color: white;
     padding: 15px 30px;
     display: flex;
-    justify-content: space-between; /* Logo a la izq, Menú a la der */
+    justify-content: space-between; 
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombrita debajo del menú */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
 }
 
 .logo {
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 2px; /* Letras un poco separadas estilo urbano */
+    letter-spacing: 2px;
 }
 
 nav ul {
@@ -51,11 +63,11 @@ nav a {
     text-decoration: none;
     font-weight: bold;
     font-size: 0.9rem;
-    transition: color 0.3s; /* Suaviza el cambio de color */
+    transition: color 0.3s; 
 }
 
 nav a:hover {
-    color: #ffd700; /* Dorado urbano al pasar el mouse */
+    color: #ffd700; 
 }
 
 /* --- 4. Tarjetas de Producto --- */
@@ -64,11 +76,12 @@ nav a:hover {
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 20px;
-    width: 250px; /* Un poco más angosto para verse mejor */
+    width: 250px; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    display: flex;       /* Nuevo: ayuda a alinear el contenido interno */
-    flex-direction: column; /* Nuevo: pone imagen, texto y botón en columna */
-    align-items: center; /* Nuevo: centra todo dentro de la tarjeta */
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 20px;
 }
 
 .producto img {
@@ -77,65 +90,37 @@ nav a:hover {
     margin-bottom: 10px;
 }
 
-/* --- 5. Botones --- */
-button {
-    background-color: #000; /* Botón negro estilo streetwear */
-    color: white;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 25px; /* Botón muy redondo */
-    cursor: pointer;
-    font-weight: bold;
-    margin-top: auto; /* Empuja el botón al final de la tarjeta */
+.producto button {
+    margin-top: 10px; 
 }
 
-button:hover {
-    background-color: #333; /* Gris oscuro al pasar el mouse */
-    transform: scale(1.05); /* Efecto pequeño de crecimiento */
-}
-/* --- Estilos para el Área de Bienvenida (H1 y P) --- */
-main h1 {
-    font-size: 3rem; /* ¡Lo hacemos muy grande! */
-    color: #1a1a1a;
-    text-transform: uppercase; /* Todo en mayúsculas (muy urbano) */
-    margin-top: 20px;
-    margin-bottom: 15px;
-    letter-spacing: 4px; /* Espacio entre letras para hacerlo más audaz */
-}
-/* --- Estilos para la Vista de Detalles del Producto --- */
-
+/* --- 5. Estilos de la Vista de Detalles (2 Columnas) --- */
 .detalle-producto {
-    display: flex; /* 1. ¡Flexbox para columnas! */
-    justify-content: space-between; /* 2. Distribuye el espacio entre los dos lados */
-    max-width: 1200px; /* Limita el ancho del contenedor en pantallas grandes */
-    margin: 40px auto; /* Centra el contenedor completo y le da margen arriba/abajo */
-    gap: 50px; /* Espacio entre las dos columnas */
+    display: flex; 
+    max-width: 1200px; 
+    margin: 40px auto; 
+    gap: 50px; 
     padding: 0 20px;
 }
 
 .visual-area {
-    flex: 1; /* Le dice a esta área que ocupe una parte del espacio disponible */
+    flex: 1; 
     text-align: center;
 }
 
 .info-area {
-    flex: 1; /* Le dice a esta área que ocupe la otra parte del espacio */
+    flex: 1; 
     text-align: left;
 }
 
 #producto-img {
-    max-width: 100%; /* La imagen no se saldrá de su columna */
+    max-width: 100%; 
     height: auto;
     border: 1px solid #ddd;
     border-radius: 8px;
 }
-main p {
-    font-size: 1.1rem;
-    color: #777; /* Gris un poco más claro */
-    margin-bottom: 50px; /* Mucha separación de las tarjetas */
-    font-weight: 500; /* Letra un poco más gruesa */
-}
-/* --- Estilos para el Selector de Color (¡ESTO FALTABA!) --- */
+
+/* --- 6. Selectores de Color --- */
 .color-picker {
     display: flex;
     gap: 15px;
@@ -145,36 +130,41 @@ main p {
 
 .color-option {
     display: block;
-    width: 30px; /* ¡Ahora sí tienen tamaño! */
+    width: 30px; 
     height: 30px; 
-    border-radius: 50%; /* Para que sea un círculo */
+    border-radius: 50%; 
     border: 3px solid #ddd;
     cursor: pointer;
     transition: all 0.2s ease;
 }
 
+/* Estado seleccionado para color */
 .color-option.selected {
-    /* Usamos 'border' completo para asegurar que se aplique sobre el border base */
     border: 3px solid #1a1a1a; 
-    transform: scale(1.1); /* Hacemos que crezca un poquito */
+    transform: scale(1.1); 
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
 }
-/* --- Estilos para los Selectores de Talla --- */
+
+/* --- 7. Selectores de Talla --- */
 .size-option {
     display: inline-block;
     border: 1px solid #aaa;
     padding: 8px 15px;
     margin-right: 10px;
     cursor: pointer;
-    border-radius: 20px; /* Mucho más redondo, estilo píldora */
+    border-radius: 20px; 
     transition: all 0.2s;
     font-weight: bold;
 }
 
 .size-option:hover:not(.selected-size) {
-    background-color: #eee; /* Gris claro al pasar el mouse (si no está seleccionado) */
+    background-color: #eee; 
     border-color: #333;
-}a1a;
+}
+
+/* Estado seleccionado para talla */
+.size-option.selected-size {
+    background-color: #1a1a1a;
     color: white;
     border-color: #1a1a1a;
 }
