@@ -1,5 +1,5 @@
 // VARIABLES GLOBALES
-const PHONE_NUMBER = '522291286166'; // 👈 CAMBIA ESTE NÚMERO POR EL TUYO REAL
+const PHONE_NUMBER = '522291286166'; // 👈 IMPORTANTE: CAMBIA ESTE NÚMERO POR EL TUYO REAL
 let selectedSize = 'M'; // Talla inicial (M por defecto)
 let selectedColor = 'Blanco'; // Color inicial (Blanco por defecto)
 
@@ -12,7 +12,7 @@ const PRODUCTS = {
 
 // --- FUNCIONES DE INTERACCIÓN ---
 
-// Función que cambia la imagen principal Y actualiza la selección visual (Color)
+// 1. Función para la selección de color y cambio de imagen
 function changeImage(clickedElement, newImageSrc) {
     // A. Cambia la imagen
     const mainImage = document.getElementById('producto-img');
@@ -31,7 +31,7 @@ function changeImage(clickedElement, newImageSrc) {
     updateWhatsAppLink(); // Llama a la función final para armar el nuevo enlace
 }
 
-// Función que selecciona la talla (Talla)
+// 2. Función para seleccionar la talla
 function selectSize(clickedElement, size) {
     // 1. Almacenar el valor de la talla
     selectedSize = size;
@@ -48,9 +48,7 @@ function selectSize(clickedElement, size) {
     updateWhatsAppLink(); // Llama a la función final
 }
 
-// --- FUNCIÓN DE CARGA Y WHATSAPP ---
-
-// Función que junta toda la información y actualiza el enlace del botón
+// 3. Función que junta toda la información y actualiza el enlace del botón
 function updateWhatsAppLink() {
     const productTitle = document.querySelector('.info-area h2').textContent;
     
@@ -66,7 +64,7 @@ function updateWhatsAppLink() {
     }
 }
 
-// Función principal: lee la URL y carga los detalles correctos al inicio
+// 4. Función principal: lee la URL y carga los detalles correctos al inicio
 function loadProductDetails() {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('id');
@@ -81,8 +79,7 @@ function loadProductDetails() {
         // b) Actualizamos la imagen inicial 
         document.getElementById('producto-img').src = product.image;
         
-        // c) Establecemos el círculo blanco/M como seleccionado al cargar 
-        // Nota: Esto asume que el círculo blanco y la talla M son los primeros elementos
+        // c) Establecemos la selección inicial (Blanco y Talla M)
         if(document.querySelector('.color-option')) {
             document.querySelector('.color-option').classList.add('selected');
         }
